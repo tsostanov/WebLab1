@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Веб-программирование: Лабораторная работа №1.">
+    <meta name="author" content="Состанов Тимур Айратович">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/icon.ico">
+    <title>Lab 1</title>
+</head>
+<body>
+<header>
+    <div class="header-text">
+        <h1>Состанов Тимур Айратович</h1>
+        <p>Группа: P3214</p>
+        <p>Вариант: 2486</p>
+    </div>
+</header>
+<table border="0" width="100%" align="centrall">
+    <!--    заголовок-->
+    <thead>
+    <tr>
+        <th colspan="2" class="table">
+            <div class="header-text">Симуляция попадания точки на плоскость</div>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- здесь будет график -->
+    <tr class="plot">
+        <td class="plot" colspan="2">
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </td>
+    </tr>
+    <!-- X -->
+    <tr>
+        <td class="table">
+            <div id="label_x">X</div>
+        </td>
+        <td class="button-container">
+            <button type="button" value="-5" class="x-button" onclick="setXValue(this)">-5</button>
+            <button type="button" value="-4" class="x-button" onclick="setXValue(this)">-4</button>
+            <button type="button" value="-3" class="x-button" onclick="setXValue(this)">-3</button>
+            <button type="button" value="-2" class="x-button" onclick="setXValue(this)">-2</button>
+            <button type="button" value="-1" class="x-button" onclick="setXValue(this)">-1</button>
+            <button type="button" value="0" class="x-button" onclick="setXValue(this)">0</button>
+            <button type="button" value="1" class="x-button" onclick="setXValue(this)">1</button>
+            <button type="button" value="2" class="x-button" onclick="setXValue(this)">2</button>
+            <button type="button" value="3" class="x-button" onclick="setXValue(this)">3</button>
+        </td>
+    </tr>
+    <!-- Y -->
+    <tr>
+        <td class="table">
+            <div id="label_y">Y</div>
+        </td>
+        <td class="table">
+            <input type="text" id="y_param" name="y"
+                   style="width: 500px; padding: 10px; border: 2px solid #ccc; border-radius: 5px; font-size: 16px;"
+                   title="Введите значение от -3 до 3"
+                   maxlength="15"
+                   placeholder="Введите значение от -3 до 3">
+        </td>
+    </tr>
+
+    <!-- R -->
+    <tr>
+        <td class="table">
+            <div id="label_r">R</div>
+        </td>
+        <td class="button-container">
+            <button type="button" value="1.0" class="r-button" onclick="setRValue(this)">1</button>
+            <button type="button" value="1.5" class="r-button" onclick="setRValue(this)">1.5</button>
+            <button type="button" value="2.0" class="r-button" onclick="setRValue(this)">2</button>
+            <button type="button" value="2.5" class="r-button" onclick="setRValue(this)">2.5</button>
+            <button type="button" value="3.0" class="r-button" onclick="setRValue(this)">3</button>
+        </td>
+    </tr>
+    <!-- кнопка подтверждения -->
+    <tr>
+        <td class="table">
+            <label>Ввод значений</label>
+        </td>
+        <td>
+            <button type="button" id="special-button" name="out_button" onclick="sendDataToServer()" disabled>Ввод параметров</button>
+            <button type="button" id="reset-button" name="reset_button" onclick="reset()">Сброс данных</button>
+        </td>
+    </tr>
+
+    <!-- здесь будут использованные значения и время-->
+    <tr>
+        <td colspan="2">
+            <table class="result-table">
+                <thead>
+                <td>X</td>
+                <td>Y</td>
+                <td>R</td>
+                <td>Результат</td>
+                <td>Время начала</td>
+                <td>Время выполнения</td>
+                </thead>
+                <tbody id="table_out">
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    <script src="js/graph.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

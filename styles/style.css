@@ -1,0 +1,111 @@
+#canvas {
+    height: 30vh;
+}
+
+header {
+    background-color: #131313;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(to bottom, #000000, #ffffff);
+}
+
+.header-text {
+    font-family: "cursive";
+    font-size: 15px;
+}
+
+.plot, table, th, td, tr {
+    border: 5px solid #000000;
+}
+
+table {
+    border-radius: 100px;
+    font-family: "fantasy";
+    font-size: 14px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 5px ridge #000000;
+}
+
+th {
+    font-size: 13px;
+    font-weight: normal;
+    background: #ffffff;
+    border: 2px ridge #000000;
+    color: black;
+    padding: 8px;
+}
+
+td {
+    background: #ffffff;
+    border: 2px ridge #000000;
+    color: black;
+    padding: 8px;
+}
+
+tr {
+    border: 2px ridge #000000;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.active.x-button, .active.r-button {
+    background-color: #312d2d;
+    color: white;
+}
+
+#special-button, #reset-button {
+    width: 150px;
+    height: 40px;
+}
+
+input[title]:hover::before {
+    content: attr(title);
+    background: #333;
+    color: #c70101;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+
+a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header p {
+    font-size: 18px;
+    margin: 5px;
+}
+
+
